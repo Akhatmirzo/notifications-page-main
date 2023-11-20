@@ -1,0 +1,279 @@
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../assets/fonts/static/PlusJakartaSans-ExtraBold.ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+@font-face {
+    font-family: 'Plus Jakarta Sans';
+    src: url('../assets/fonts/static/PlusJakartaSans-Medium.ttf');
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    font-variant: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 16px;
+    background: hsl(210, 60%, 98%);
+}
+
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+main {
+    padding-block: 20px 0;
+}
+
+.notifications__wrapper {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.notifications__content {
+    max-width: 768px;
+    background: hsl(0, 0%, 100%);
+    box-shadow: 0 0 10px rgba(102, 101, 101, 0.1);
+
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.notifications__content::-webkit-scrollbar {
+    width: 0;
+}
+
+.content__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.new-notif {
+    padding: 3px 12px;
+    border-radius: 7px;
+    background-color: hsl(219, 85%, 26%);
+    font-size: 15px;
+    color: white;
+    line-height: normal;
+}
+
+.content__title>span {
+    font-weight: 500;
+    letter-spacing: 0.05vw;
+    color: hsl(219, 12%, 42%);
+}
+
+.content__title>span:hover {
+    color: hsl(219, 85%, 26%);
+    transition: all 0.1s ease;
+    cursor: pointer;
+}
+
+.all__notices {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.notice {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.notice:where(.notice:first-child, .notice:nth-child(2), .notice:nth-child(3)) {
+    background-color: hsla(219, 58%, 35%, 0.05);
+}
+
+.notice-image {
+    width: 60px;
+    height: 60px;
+    margin-top: -5px;
+}
+
+.notices-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-post {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.user-post>div {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.user-post span:first-child:hover {
+    color: hsl(219, 85%, 26%);
+    transition: all 0.1s ease;
+    cursor: pointer;
+}
+
+.user-post span:nth-child(2) {
+    font-size: 15px;
+    font-weight: 500;
+    color: hsl(219, 12%, 42%);
+    margin-inline: 5px;
+}
+
+.user-post span:last-child {
+    color: hsl(219, 12%, 42%);
+}
+.user-post span:last-child:hover {
+    color: hsl(219, 85%, 26%);
+    transition: all 0.1s ease;
+    cursor: pointer;
+}
+
+.reason>div {
+    display: inline-block;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.notice:where(.notice:first-child, .notice:nth-child(2), .notice:nth-child(3)) .red-notif {
+    background-color: hsl(1, 90%, 64%);
+}
+
+.time {
+    font-size: 15px;
+    font-weight: 500;
+    color: hsl(219, 14%, 63%);
+}
+
+.userText {
+    max-width: 95%;
+    padding: 15px;
+    border: 1px solid hsl(205, 33%, 90%);
+    border-radius: 5px;
+    color: hsl(219, 14%, 63%);
+    font-weight: 500;
+}
+
+.userText:hover {
+    background-color: hsla(219, 85%, 26%, 0.114);
+    border-color: transparent;
+    color: hsl(219, 12%, 42%);
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+footer {
+    width: 100%;
+    padding-block: 20px;
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        background: hsl(0, 0%, 100%);
+    }
+
+    main {
+        padding-block: 10px;
+    }
+
+    .notifications__wrapper {
+        height: auto;
+    }
+
+    .notifications__content {
+        max-width: 100%;
+        max-height: 100%;
+        overflow-x: auto;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 20px 0;
+    }
+
+    .user-post>div {
+        display: block;
+    }
+
+    footer {
+        position: static;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    body {
+        font-size: 12px;
+    }
+
+    .title {
+        font-size: 16px;
+    }
+
+    .new-notif {
+        font-size: 12px;
+    }
+
+    .notice {
+        padding: 15px;
+    }
+
+    .notice-image {
+        width: 40px;
+        height: 40px;
+    }
+
+    .user-post>div {
+        font-size: 12px;
+    }
+
+    .user-post span:nth-child(2) {
+        font-size: 10px;
+    }
+
+    .circle {
+        width: 7px;
+        height: 7px;
+    }
+
+    .time {
+        font-size: 12px;
+    }
+}

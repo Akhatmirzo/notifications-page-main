@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Notifications page</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <section class="notifications">
+      <div class="container notifications__wrapper">
+        <div class="notifications__content">
+
+          <!-- ! Notification content titles -->
+          <div class="content__title">
+            <h2 class="title">
+              Notifications
+              <span class="new-notif"></span>
+            </h2>
+            <span onclick="del_mark()">Mark all as read</span>
+          </div>
+
+          <!-- ! All notices -->
+          <div class="all__notices">
+
+            <!-- ! notice -->
+            <div class="notice">
+              <img src="./assets/images/avatar-mark-webber.webp" alt="Mark Webber" class="notice-image">
+
+              <div class="notices-text">
+                <div class="post-text">
+                  <h2 class="user-post">
+                    <div>
+                      <span>Mark Webber</span>
+                      <span class="purpose">reacted to your recent post</span>
+                      <span class="reason">My first tournament today! <div class="circle red-notif"></div> </span>
+                    </div>
+                    
+                  </h2>
+                </div>
+                <h3 class="time"><span class="past-time">1m</span> ago</h3>
+              </div>
+            </div>
+            <!-- ! notice end of-->
+
+
+            <!-- ! notice -->
+            <div class="notice">
+              <img src="./assets/images/avatar-angela-gray.webp" alt="Angela Gray" class="notice-image">
+
+              <div class="notices-text">
+                <div class="post-text">
+                  <h2 class="user-post">
+                    <div>
+                      <span>Angela Gray</span>
+                      <span class="purpose">followed you</span>
+                      <span class="reason"> <div class="circle red-notif"></div> </span>
+                    </div>
+                    
+                  </h2>
+                </div>
+                <h3 class="time"><span class="past-time">5m</span> ago</h3>
+              </div>
+            </div>
+            <!-- ! notice end of-->
+
+
+            <!-- ! notice -->
+            <div class="notice">
+              <img src="./assets/images/avatar-jacob-thompson.webp" alt="Jacob Thompson" class="notice-image">
+
+              <div class="notices-text">
+                <div class="post-text">
+                  <h2 class="user-post">
+                    <div>
+                      <span>Jacob Thompson</span>
+                      <span class="purpose">has joined your group</span>
+                      <span class="reason">Chess Club <div class="circle red-notif"></div></span>
+                    </div>
+                    
+                  </h2>
+                </div>
+                <h3 class="time"><span class="past-time">1 day</span> ago</h3>
+              </div>
+            </div>
+            <!-- ! notice end of-->
+
+
+            <!-- ! notice -->
+            <div class="notice">
+              <img src="./assets/images/avatar-rizky-hasanuddin.webp" alt="Rizky Hasanuddin" class="notice-image">
+
+              <div class="notices-text">
+                <div class="post-text">
+                  <h2 class="user-post">
+                    <div>
+                      <span>Rizky Hasanuddin</span>
+                      <span class="purpose">sent you a private message</span>
+                      <span class="reason"></span>
+                    </div>
+                    <div class="circle red-notif"></div>
+                  </h2>
+                </div>
+                <h3 class="time"><span class="past-time">5 day</span> ago</h3>
+                <p class="userText">
+                  Hello, thanks for setting up the Chess Club. I've been a member for a few weeks now and
+                  I'm already having lots of fun and improving my game.
+                </p>
+              </div>
+            </div>
+            <!-- ! notice end of-->
+
+
+            <!-- ! notice -->
+            <div class="notice">
+              <img src="./assets/images/avatar-kimberly-smith.webp" alt="Kimberly Smith" class="notice-image">
+
+              <div class="notices-text">
+                <div class="post-text">
+                  <h2 class="user-post">
+                    <div>
+                      <span>Kimberly Smith</span>
+                      <span class="purpose">commented on your picture</span>
+                      <span class="reason"></span>
+                    </div>
+                    <div class="circle red-notif"></div>
+                  </h2>
+                </div>
+                <h3 class="time"><span class="past-time">1 week</span> ago</h3>
+              </div>
+            </div>
+            <!-- ! notice end of-->
+
+
+            <!-- ! notice -->
+            <div class="notice">
+              <img src="./assets/images/avatar-nathan-peterson.webp" alt="Nathan Peterson" class="notice-image">
+
+              <div class="notices-text">
+                <div class="post-text">
+                  <h2 class="user-post">
+                    <div>
+                      <span>Nathan Peterson</span>
+                      <span class="purpose">reacted to your recent post</span>
+                      <span class="reason">5 end-game strategies to increase your win rate</span>
+                    </div>
+                    <div class="circle red-notif"></div>
+                  </h2>
+                </div>
+                <h3 class="time"><span class="past-time">2 week</span> ago</h3>
+              </div>
+            </div>
+            <!-- ! notice end of-->
+
+
+            <!-- ! notice -->
+            <div class="notice">
+              <img src="./assets/images/avatar-anna-kim.webp" alt="Anna Kim" class="notice-image">
+
+              <div class="notices-text">
+                <div class="post-text">
+                  <h2 class="user-post">
+                    <div>
+                      <span>Anna Kim</span>
+                      <span class="purpose">left the group</span>
+                      <span class="reason">Chess Club</span>
+                    </div>
+                    <div class="circle red-notif"></div>
+                  </h2>
+                </div>
+                <h3 class="time"><span class="past-time">2 week</span> ago</h3>
+              </div>
+            </div>
+            <!-- ! notice end of-->
+
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
